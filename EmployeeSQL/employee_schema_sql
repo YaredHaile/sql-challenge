@@ -1,0 +1,37 @@
+Departments
+-
+Dept_no PK int
+Dept_name VARCHAR
+
+Dept_emp
+-
+Emp_no PK int FK >- Departments.Dept_no
+Dept_no PK int FK >- Employees.Emp_no
+
+
+Dept_manager
+-
+Dept_no PK int FK >- Departments.Dept_no
+Dmpt_no PK int FK >- Employees.Emp_no
+
+
+Employees
+-
+Emp_no PK int
+Emp_title_id int
+Birth_date DATE
+First_name VARCHAR
+Last_name VARCHAR
+Sex CHAR
+Hire_date DATE
+
+Salaries
+-
+Emp_no PK int FK >- Employees.Emp_no
+Salary DEC FK >- Employees.Emp_no
+
+
+Titles
+-
+Emp_no PK int FK >- Employees.Emp_title_id
+Title VARCHAR FK >- Employees.Emp_title_id
